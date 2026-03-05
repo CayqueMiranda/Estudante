@@ -1,5 +1,6 @@
 package com.estudantee.Models;
 
+import com.estudantee.Enums.EstudanteEnum;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,10 +13,13 @@ public class EstudanteModel {
     private String nome;
     private String email;
     private int idade;
+    private EstudanteEnum estudanteEnum;
+
 
     public EstudanteModel() {
-
     }
+
+
 
     public Long getId() {
         return id;
@@ -47,5 +51,13 @@ public class EstudanteModel {
 
     public void setIdade(int idade) {
         this.idade = idade;
+    }
+
+    public EstudanteEnum getEstudanteEnum() {
+        return estudanteEnum;
+    }
+
+    public void setEstudanteEnum(EstudanteEnum estudanteEnum) {
+        this.estudanteEnum = estudanteEnum;
     }
 }
